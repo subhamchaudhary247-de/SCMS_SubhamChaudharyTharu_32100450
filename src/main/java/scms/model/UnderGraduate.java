@@ -22,6 +22,16 @@ public class UnderGraduate extends Student {
         this.adminName = adminName;
         this.contactNo = contactNo;
     }
+    
+    public int getcontactNo(){
+        return contactNo;
+    }
+    
+    public void setcontactNo(int contactNo){
+        this.contactNo = contactNo;
+    }
+   
+    
     public String toString(){
         return "Student [ ID = " + studentID +",Name = " + name + ",Major = " + 
                 major + ",Semester = " + semester + ",AttendancePercentage = " + 

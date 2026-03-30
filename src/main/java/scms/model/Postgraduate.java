@@ -23,6 +23,14 @@ public class Postgraduate extends Student {
         this.contactNo = contactNo;
     }
     
+    public int getcontactNo(){
+        return contactNo;
+    }
+    
+    public void setcontactNo(int contactNo){
+        this.contactNo = contactNo;
+    }
+    
     public String toString(){
         return "Graduate Student [ ID = " + studentID +",Name = " + name + ",Major = " + 
                 major + ",Semester = " + semester + ",AttendancePercentage = " + 

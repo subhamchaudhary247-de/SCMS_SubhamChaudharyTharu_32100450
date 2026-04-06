@@ -33,7 +33,7 @@ public class UnderGraduate extends Student {
    
     
     public String toString(){
-        return "Student [ ID = " + studentID +",Name = " + name + ",Major = " + 
+        return " Graduate Student [ ID = " + studentID +",Name = " + name + ",Major = " + 
                 major + ",Semester = " + semester + ",AttendancePercentage = " + 
                 attendancePercentage + ",PercentageOfMarks = " + percentageOfMarks + ",Progam = "
                 + program + ",Duration = " + duration + ",AdminName = " + adminName + "ContactNo = " 

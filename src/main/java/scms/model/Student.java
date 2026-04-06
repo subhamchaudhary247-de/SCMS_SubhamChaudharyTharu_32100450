@@ -39,4 +39,6 @@ public class Student {
                 major + ",Semester = " + semester + ",AttendancePercentage = " + 
                 attendancePercentage + ",PercentageOfMarks = " + percentageOfMarks + "]";
     }
+    
+    
 }

@@ -3,11 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package scms;
+import scms.ui.DashboardFrame;
+
 
 /**
  *
  * @author sumitchaudhary
  */
 public class Main {
+     public static void main(String[] args) {
+       DashboardFrame dashboard = new DashboardFrame();
+        dashboard.show();
+    }
     
 }

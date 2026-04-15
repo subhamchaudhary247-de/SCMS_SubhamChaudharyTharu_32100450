@@ -40,10 +40,20 @@ public class Main {
        UnderGraduate ug12 = new UnderGraduate(32100112, "Mia", 18, "IT", 1, 72, 77, "undergraduate", 3, "Tanmya Singha", +61-400-111122);
        
        //Adding data of UnderGraduate Students to the student List
-       std.addAll(Arrays.asList(ug1,ug2,ug3,ug4,ug5,ug6,ug7,ug8,ug9,ug10));
+       std.addAll(Arrays.asList(ug1, ug2, ug3, ug4, ug5, ug6, ug7, ug8, ug9, ug10));
        
-        
+        //Data of Postgraduate Students
+        Postgraduate pg1 = new Postgraduate(201, "Alice", 24, "DS", 2, 88, 90, "postgraduate", 2, "Lisa Ban", +61-400-222221);
+        Postgraduate pg2 = new Postgraduate(202, "David", 25, "Cyber", 1, 85, 87, "postgraduate", 2, "Lisa Ban", +61-400-222222);
+        Postgraduate pg3 = new Postgraduate(203, "Chris", 26, "AI", 3, 90, 92, "postgraduate", 2, "Lisa Ban", +61-400-222223);
+        Postgraduate pg4 = new Postgraduate(204, "Nina", 23, "Cloud", 2, 87, 89, "postgraduate", 2, "Lisa Ban", +61-400-222224);
+        Postgraduate pg5 = new Postgraduate(205, "Tom", 27, "Security", 1, 84, 86, "postgraduate", 2, "Lisa Ban", +61-400-222225);
+        Postgraduate pg6 = new Postgraduate(206, "Sara", 24, "Data", 2, 89, 91, "postgraduate", 2, "Lisa Ban", +61-400-222226);
+        Postgraduate pg7 = new Postgraduate(207, "Leo", 25, "ML", 3, 91, 93, "postgraduate", 2, "Lisa Ban", +61-400-222227);
+        Postgraduate pg8 = new Postgraduate(208, "Anna", 23, "BigData", 1, 86, 88, "postgraduate", 2, "Lisa Ban", +61-400-222228);
        
+        //Adding data of Postraduate Students to the student List
+        std.addAll(Arrays.asList(pg1, pg2, pg3, pg4, pg5, pg6, pg7, pg8));
        DashboardFrame dashboard = new DashboardFrame();
         dashboard.show();
     }

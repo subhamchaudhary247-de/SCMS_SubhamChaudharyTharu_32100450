@@ -11,7 +11,7 @@ import java.awt.*;
  * @author sumitchaudhary
  */
 public class DashboardFrame {
-    JFrame frame;
+    private JFrame frame;
     
     public DashboardFrame(){
     frame = new JFrame("SCMS_SubhamChaudharyTharu_32100450");

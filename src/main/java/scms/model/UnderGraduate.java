@@ -1,4 +1,4 @@
-/*
+/*//SubhamChaudharyTharu-32100450
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -31,7 +31,7 @@ public class UnderGraduate extends Student {
         this.contactNo = contactNo;
     }
    
-    
+    @Override
     public String toString(){
         return " Graduate Student [ ID = " + studentID +",Name = " + name + ",Major = " + 
                 major + ",Semester = " + semester + ",AttendancePercentage = " + 

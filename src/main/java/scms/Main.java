@@ -1,4 +1,4 @@
-/*
+/*//SubhamChaudharyTharu-32100450
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -40,7 +40,7 @@ public class Main {
        UnderGraduate ug12 = new UnderGraduate(32100112, "Mia", 18, "IT", 1, 72, 77, "undergraduate", 3, "Tanmya Singha", +61-400-111122);
        
        // Adding data of UnderGraduate Students to the student List
-       std.addAll(Arrays.asList(ug1, ug2, ug3, ug4, ug5, ug6, ug7, ug8, ug9, ug10));
+       std.addAll(Arrays.asList(ug1, ug2, ug3, ug4, ug5, ug6, ug7, ug8, ug9, ug10, ug11, ug12));
        
         // Data of Postgraduate Students
         Postgraduate pg1 = new Postgraduate(201, "Alice", 24, "DS", 2, 88, 90, "postgraduate", 2, "Lisa Ban", +61-400-222221);
@@ -75,7 +75,21 @@ public class Main {
         // Storing Postgraduate courses at courses set
         course.addAll(Arrays.asList(c6, c7, c8, c9, c10));
         
-       DashboardFrame dashboard = new DashboardFrame();
+        // Mapping UnderGraduate Students
+        enrolled_std.put("COMP1005", new ArrayList<>(Arrays.asList(ug1,ug2,ug3)));
+        enrolled_std.put("COMP1004", new ArrayList<>(Arrays.asList(ug4,ug5)));
+        enrolled_std.put("COMP1006", new ArrayList<>(Arrays.asList(ug6,ug7)));
+        enrolled_std.put("COMP2014", new ArrayList<>(Arrays.asList(ug8)));
+        enrolled_std.put("COMP1001", new ArrayList<>(Arrays.asList(ug9,ug10)));
+        
+        // Mapping Postgraduate Students
+        enrolled_std.put("PG201", new ArrayList<>(Arrays.asList(pg1,pg2)));
+        enrolled_std.put("PG202", new ArrayList<>(Arrays.asList(pg3,pg4)));
+        enrolled_std.put("PG203", new ArrayList<>(Arrays.asList(pg5)));
+        enrolled_std.put("PG204", new ArrayList<>(Arrays.asList(pg6,pg7)));
+        enrolled_std.put("PG205", new ArrayList<>(Arrays.asList(pg8)));
+        
+       DashboardFrame dashboard = new DashboardFrame(std, course, enrolled_std);
         dashboard.show();
     }
     

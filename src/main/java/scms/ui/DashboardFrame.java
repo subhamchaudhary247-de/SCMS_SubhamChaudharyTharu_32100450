@@ -1,10 +1,14 @@
-/*
+/*//SubhamChaudharyTharu-32100450
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package scms.ui;
+import scms.model.*;
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -12,8 +16,16 @@ import java.awt.*;
  */
 public class DashboardFrame {
     private JFrame frame;
+    private List<Student> std;
+    private Set<Course> course;
+    private Map<String, List<Student>> enrolled_std;
+   
+
     
-    public DashboardFrame(){
+    public DashboardFrame(List<Student> std, Set<Course> course, Map<String, List<Student>> enrolled_std){
+        this.std = std;
+        this.course = course;
+        this.enrolled_std= enrolled_std;
     frame = new JFrame("SCMS_SubhamChaudharyTharu_32100450");
     frame.setSize(600,400);
     frame.setLayout(new BorderLayout());
@@ -57,8 +69,70 @@ public class DashboardFrame {
     
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
+    // Actions
+        B1.addActionListener(e -> {
+            result.setText("Total Students: " + std.size());
+        });
+
+        B2.addActionListener(e -> {
+            long ug = std.stream().filter(s -> s instanceof UnderGraduate).count();
+            long pg = std.stream().filter(s -> s instanceof Postgraduate).count();
+            result.setText("Undergraduate Students: " + ug + "\nPostgraduate Students: " + pg);
+        });
+
+        B3.addActionListener(e -> {
+            double ugAvg = std.stream()
+                    .filter(s -> s instanceof UnderGraduate)
+                    .mapToDouble(Student::getpercentageOfMarks)
+                    .average()
+                    .orElse(0);
+
+            double pgAvg = std.stream()
+                    .filter(s -> s instanceof Postgraduate)
+                    .mapToDouble(Student::getpercentageOfMarks)
+                    .average()
+                    .orElse(0);
+
+            result.setText("Average Marks of UG: " + ugAvg + "\nAverage Marks of PG: " + pgAvg);
+        });
+
+        B4.addActionListener(e -> {
+            double ugAvgAttendance = std.stream()
+                    .filter(s -> s instanceof UnderGraduate)
+                    .mapToDouble(Student::getattendancePercentage)
+                    .average()
+                    .orElse(0);
+
+            double pgAvgAttendance = std.stream()
+                    .filter(s -> s instanceof Postgraduate)
+                    .mapToDouble(Student::getattendancePercentage)
+                    .average()
+                    .orElse(0);
+
+            result.setText("Average Attendance of UG: " + ugAvgAttendance +
+                    "\nAverage Attendance of PG: " + pgAvgAttendance);
+        });
+
+        B5.addActionListener(e -> {
+            result.setText("Total Courses: " + course.size());
+        });
+
+        B6.addActionListener(e -> {
+            String courseId = JOptionPane.showInputDialog(frame, "Enter Course ID:");
+            if (courseId != null) {
+                courseId = courseId.trim();
+                List<Student> enrolledStudents = enrolled_std.get(courseId);
+
+                if (enrolledStudents != null) {
+                    result.setText("Students enrolled in " + courseId + ": " + enrolledStudents.size());
+                } else {
+                    result.setText("Course ID not found.");
+                }
+            }
+        });
     
-}
+    
+    }
     public void show(){
         frame.setVisible(true);
     }

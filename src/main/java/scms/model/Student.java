@@ -1,4 +1,4 @@
-/*
+/*//SubhamChaudharyTharu-32100450
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -33,6 +33,9 @@ public class Student {
     }
     public void setpercentageOfMarks(double percentageOfMarks){
         this.percentageOfMarks = percentageOfMarks;
+    }
+    public double getattendancePercentage(){
+        return attendancePercentage;
     }
     public String toString(){
         return "Student [ ID = " + studentID +",Name = " + name + ",Major = " + 
